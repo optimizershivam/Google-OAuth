@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <style>
+            body{
+                font-family: arial;
+                margin: 0;
+            }
+            nav{
+                background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+                padding: 20px 10px;
+                height: 100px;
+            }
+            nav ul{
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 0;
+                
+            }
+            nav li{
+                list-style-type: none;
+                display: inline-block;
+                margin: 0 10px 0 0;
+                /* height: 50px; */
+              
+            }
+            nav a{
+                /* color: blueviolet; */
+                font-size: 20px;
+                background: rgba(255,255,255,0.2);
+                text-decoration: none;
+                padding: 10px;
+                display: block;
+                color: white;
+                /* height: 50px; */
+            }
+            main, header{
+                max-width: 960px;
+                margin: 30px auto;
+                padding: 0 10px;
+                color: #333;
+            }
+         
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <% if (user) { %>
+                <li><a href="/logout">Log out</a></li>
+                <% } else { %>
+                <li><a href="/login">Login</a></li>
+                <% } %>
+                <li><a href="/">Homepage</a></li>
+                <li><a href="/profile">Profile</a></li>
+            </ul>
+        </nav>
+        <header>
+            <!-- <h1>Login using...</h1> -->
+        </header>
+        <main>
+            <div>
+                <div class="col s12 m6 offset-m3 center-align">
+                    <a class="oauth-container btn darken-4 white black-text" href="/google" style="text-transform:none">
+                        <div class="left">
+                            <img width="20px" style="margin-top:7px; margin-right:8px" alt="Google sign-in" 
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                        </div>
+                        Login with Google
+                    </a>
+                </div>
+              </div>
+        </main>
+    </body>
+</html>
